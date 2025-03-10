@@ -138,8 +138,7 @@ function checkPasswordVisibility(element) {
  * @param {HTMLElement} element - The visibility icon element.
  */
 function togglePasswordVisibility(element) {
-  var element = element;
-  var input = element.parentNode.previousElementSibling;
+  const input = element.parentNode.previousElementSibling;
 
   if (input.type === "password") {
     input.type = "text";
