@@ -3,9 +3,9 @@
  * @returns {Promise<void>} A promise that resolves once the sign-up process is complete.
  */
 async function signUp() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
   let userId = 1;
 
   let users = await getUsers();
@@ -31,8 +31,8 @@ async function signUp() {
  * @returns {boolean} True if passwords match, false otherwise.
  */
 function checkPasswords() {
-  let password = document.getElementById("password");
-  let passwordConfirm = document.getElementById("password-confirm");
+  const password = document.getElementById("password");
+  const passwordConfirm = document.getElementById("password-confirm");
 
   if (password.value == passwordConfirm.value) {
     passwordConfirm.parentElement.classList.remove("has-error");
@@ -50,8 +50,8 @@ function checkPasswords() {
  * @returns {boolean} True if privacy policy is accepted, false otherwise.
  */
 function checkPrivacy() {
-  var acceptPp = document.getElementById("accept-pp");
-  var signupButton = document.getElementById("signup-button");
+  const acceptPp = document.getElementById("accept-pp");
+  const signupButton = document.getElementById("signup-button");
 
   if (acceptPp.checked) {
     signupButton.disabled = false;
