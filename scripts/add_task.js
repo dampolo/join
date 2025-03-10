@@ -105,7 +105,7 @@ function addTaskChooseCategory(category) {
   globalCategory = selectElement;
 }
 
-function addTaskChooseCategoryManuely() {
+function addTaskChooseCategoryManually() {
   const element = document.getElementById("add-task-category").value
   return element
 }
@@ -152,7 +152,7 @@ async function addTaskCreateTask() {
     assignees: names,
     date: date,
     priority: globalPrio,
-    category: globalCategory === "" ? addTaskChooseCategoryManuely() : globalCategory,
+    category: globalCategory === "" ? addTaskChooseCategoryManually() : globalCategory,
     subtasks: [],
   };
 

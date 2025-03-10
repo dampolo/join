@@ -160,7 +160,7 @@ function editTask() {
   editTaskDescription(boardTasks[index].description);
   editTaskDialogAssignedToAvatars(boardTasks[index].assignees);
   editTaskDialogDueDate(boardTasks[index].date);
-  editTaskChoseCategory(boardTasks[index].category);
+  editTaskChooseCategory(boardTasks[index].category);
   editTaskRenderAssignedTo();
   editTaskInitPriorityButtons();
   editRenderTaskSubtasksList(boardTasks[index].subtasks);
@@ -346,7 +346,7 @@ function editTaskDialogPriority(priority, container, event) {
  * Updates the category of the task in the edit task dialog.
  * @param {*} category - The category value to be set for the task.
  */
-function editTaskChoseCategory(category) {
+function editTaskChooseCategory(category) {
   document.getElementById("add-task-category-edit").value = category;
   newTask.category = category;
 }
@@ -389,7 +389,8 @@ function editAddTaskSubtasks(event) {
 }
 
 /**
- *
+ * This function updates the list of subtasks in the edit task interface.
+ * It clears the existing list and then regenerates the HTML for each subtask in the `editSubtasksList` array.
  */
 function editAddTaskSubtasksList() {
   const lists = document.getElementById("add-task-subtasks-list-edit");
