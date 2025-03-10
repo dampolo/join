@@ -100,9 +100,14 @@ function addTaskPrio(prio, container, event) {
  *
  * @param {string} category - The ID of the element containing the selected category text.
  */
-function addTaskChoseCategory(category) {
-  let selectElement = (document.getElementById("add-task-category").value = category);
+function addTaskChooseCategory(category) {
+  selectElement = (document.getElementById("add-task-category").value = category);
   globalCategory = selectElement;
+}
+
+function addTaskChooseCategoryManuely() {
+  const element = document.getElementById("add-task-category").value
+  return element
 }
 
 /**
@@ -147,7 +152,7 @@ async function addTaskCreateTask() {
     assignees: names,
     date: date,
     priority: globalPrio,
-    category: globalCategory,
+    category: globalCategory === "" ? addTaskChooseCategoryManuely() : globalCategory,
     subtasks: [],
   };
 
