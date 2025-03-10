@@ -37,9 +37,9 @@ function animateBackdrop() {
  * @returns {Promise<void>}
  */
 async function doLogIn() {
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
-  var logInButton = document.getElementById("logInButton");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const logInButton = document.getElementById("logInButton");
 
   logInButton.disabled = true;
 

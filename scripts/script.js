@@ -36,7 +36,7 @@ async function includeHTML() {
 function loadHeader(showRightSection = true) {
   if (isLoggedIn() && showRightSection) {
     let headerUserInitials = document.getElementById("headerUserInitials");
-    var currentUser = getLoggedInUser();
+    const currentUser = getLoggedInUser();
     headerUserInitials.innerHTML = getUserInitials(currentUser.name);
     document.getElementById("header-right-section").style.display = "flex";
   }
@@ -47,7 +47,7 @@ function loadHeader(showRightSection = true) {
  * @param {string} elementId - The ID of the navigation item to set as active.
  */
 function setNavActive(elementId) {
-  let navItem = document.getElementById(`nav-${elementId}`);
+  const navItem = document.getElementById(`nav-${elementId}`);
   navItem.classList.add("active");
 }
 
@@ -55,7 +55,7 @@ function setNavActive(elementId) {
  * Toggles the visibility of the header menu.
  */
 function toggleHeaderMenu() {
-  var headerMenu = document.getElementById("header-menu");
+  const headerMenu = document.getElementById("header-menu");
   headerMenu.classList.toggle("show");
 
   if (headerMenu.classList.contains("show")) {
@@ -68,9 +68,9 @@ function toggleHeaderMenu() {
  * @param {Event} event - The click event.
  */
 function closeHeaderMenu(event) {
-  var headerMenu = document.getElementById("header-menu");
-  var headerToggler = document.getElementById("headerUserInitials");
-  var targetElement = event.target;
+  const headerMenu = document.getElementById("header-menu");
+  const headerToggler = document.getElementById("headerUserInitials");
+  const targetElement = event.target;
 
   if (!headerToggler.contains(targetElement) && headerMenu.classList.contains("show")) {
     headerMenu.classList.remove("show");
@@ -85,9 +85,9 @@ function closeHeaderMenu(event) {
  */
 function getUserInitials(name) {
   let initials = "";
-  var name = name.split(" ");
-  for (let i = 0; i < name.length; i++) {
-    initials += name[i].charAt(0).toUpperCase();
+  const nameParts = name.split(" ");
+  for (let i = 0; i < nameParts.length; i++) {
+    initials += nameParts[i].charAt(0).toUpperCase();
   }
   return initials;
 }
