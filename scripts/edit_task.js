@@ -35,8 +35,9 @@ function renderTaskCategory(category) {
   const dialogCategoryElement = document.getElementById("dialog-show-category");
 
   let className = category.replace(/\s+/g, "-").toLowerCase();
-
-  dialogCategoryContainer.classList.add(className);
+  if(className) {
+    dialogCategoryContainer.classList.add(className);
+  }
   dialogCategoryElement.innerHTML = category;
 }
 
