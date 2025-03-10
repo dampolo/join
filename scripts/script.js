@@ -122,8 +122,7 @@ function authGuard() {
  * @param {HTMLInputElement} element - The password input element.
  */
 function checkPasswordVisibility(element) {
-  var element = element;
-  var icon = element.nextElementSibling.children[0];
+  const icon = element.nextElementSibling.children[0];
 
   if (element.value === "") {
     icon.src = "assets/icons/lock.svg";
