@@ -155,7 +155,7 @@ function togglePasswordVisibility(element) {
  * @param {number} [time=2500] - The duration in milliseconds to display the toast (optional, default is 2500 milliseconds).
  */
 function showToast(message, time = 2500) {
-  var toastMessage = document.getElementById("toastMessage");
+  const toastMessage = document.getElementById("toastMessage");
   toastMessage.innerHTML = message;
   document.body.style.overflow = "hidden";
   fadeInToast();
@@ -169,7 +169,7 @@ function showToast(message, time = 2500) {
  * Fades in the toast message.
  */
 function fadeInToast() {
-  var toastContainer = document.getElementById("toastContainer");
+  const toastContainer = document.getElementById("toastContainer");
   toastContainer.classList.add("show");
   setTimeout(function () {
     toastContainer.classList.add("animate");
@@ -180,7 +180,7 @@ function fadeInToast() {
  * Fades out the toast message.
  */
 function fadeOutToast() {
-  var toastContainer = document.getElementById("toastContainer");
+  const toastContainer = document.getElementById("toastContainer");
   toastContainer.classList.remove("animate");
   setTimeout(function () {
     toastContainer.classList.remove("show");
@@ -262,7 +262,7 @@ function closeDialogForce() {
  * Defines color codes for each alphabet letter.
  * @type {Object<string, string>}
  */
-let colors = {
+const colors = {
   a: "#ff7a00",
   b: "#ff5eb3",
   c: "#6e52ff",
